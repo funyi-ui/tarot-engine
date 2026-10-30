@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tarot-engine"
+version = "0.1.0"
+description = "78장 타로 카드 엔진: 시드 기반 셔플, 정/역방향, 원카드·3카드·켈틱크로스 스프레드"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+tarot-engine = "tarot_engine.cli:main"
+
+[tool.setuptools]
+packages = ["tarot_engine"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
